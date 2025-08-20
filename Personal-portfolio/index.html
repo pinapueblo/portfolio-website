@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pablo Pena</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css">
+        </head>
+        <body>
+        <header id="header">
+            <div class="container">
+            <nav aria-label="Main Navigation">
+                <img src="images/newlogo.png" class="logo" alt="Pablo Pena Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="publictalks.html">Public Talks</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Mechanical Engineer | Robotics Enthusiast | Programmer</p>
+                <h1>Hi, I'm <span>Pablo Pena</span></h1>
+                </div>
+            </div>
+        </header>
+
+            <!-- about section -->
+            <div class="about" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="images/aboutme.png" alt="Portrait of Pablo Pena">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class = "subtitle"> About Me </h1>
+                            <p>Hi, I'm Pablo! I'm an undergraduate Mechanical Engineering major at The University of Texas at Austin with a passion for bridging the gap between software and hardware. Whether I’m designing parts in CAD, building prototypes through additive and subtractive manufacturing, or programming robots to life, I love turning ideas into reality.
+                                My interests lie at the intersection of mechanical design, automation, and embedded systems. I’ve gained hands-on experience through projects involving 3D modeling, programming, and fabrication, and I’m always looking for new ways to expand my skill set.
+                                Outside of engineering, I enjoy working on my fitness, learning new languages, and exploring mathematics.
+                            </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>
+                            <!---Skills--->
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                        <li><span> CAD </span> <br> Solidworks, Siemens NX, FEA, GD&T </li>
+                                        <li><span> Manufacturing </span> <br> 3D printing, Laser Cutting, Soldering </li>
+                                        <li><span> Programming </span> <br> C++, C#, CSS, HTML, Java, Python, SQL, DAX, LaTeX, MATLAB</li>
+                                </ul>
+                            </div>
+
+                            <!---Experience--->
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                        <li><span> 2024 </span> <br> &#x2022; Landry’s Information Technology Internship | Information Technology Intern | </li>
+                                        <li><span> 2025 </span> <br> &#x2022; NASA L'Space MCA | Payload Mechanical Engineer | <br> &#x2022; Varsity Tutors | DSAT & EOG Tutor | </li>
+                                </ul>
+                            </div>
+                            <!---Education--->
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                        <li><span> University of Texas at Austin </span> <br> B.S. Mechanical Engineering | May 2028 </li>
+                                        <li><span>Cummulative GPA: </span> <br> 4.0 </li>
+                                        <li><span>Relavent Coursework: </span> <br>Differential Equations with Linear Algebra, Intro to Engineering Design & Graphics, Sequences, Series, and Multivariable Calculus, Statics </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- projects section -->
+            <div class="portfolio" id="portfolio">
+            <div class="container">
+                <h1 class="subtitle">Projects</h1>
+                <div class="work-list">
+                <div class="work">
+                    <img src="images/battlebotphoto1.png" alt="Battlebot project image" />
+                    <div class="layer">
+                    <h3>1 lb Battlebot</h3>
+                    <p>A 3D printed, remote-controlled robot designed to battle other robots.</p>
+                    <a href="project-battlebot.html" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/chessproject.png" alt="iPhone and AirPods stand image" />
+                    <div class="layer">
+                    <h3>Chess and Checkers Set</h3>
+                    <p>A custom 3D printed chess and checkers set with an integrated timer.</p>
+                    <a href="project-chess.html" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/hmm.png" alt="Website image" />
+                    <div class="layer">
+                    <h3>hmm website</h3>
+                    <p>A reference website for essential mathematics and physics formulas.</p>
+                    <a href="project-hmm.html" target="_blank"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                </div>
+                <a href="#" class="btn">See More</a>
+            </div>
+            </div>
+
+            <!---Resume section-->
+            <div id="resume" class="resume">
+                <div class="container">
+                    <h1 class="subtitle">Resume</h1>
+                    <a href="images/Pablo Pena_Resume.pdf" class="button"> View My Resume</a></li>
+                </div>
+            </div>
+
+            <!---contact section--->
+            <div id="contact">
+                <div class="container">
+                        <h1 class = "subtitle"> Contact Me </h1>
+                        <p><i class="fa-solid fa-envelope"></i> pablopdaiki@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 281-974-8224</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/pablo-pena-169123280/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/pinapueblo"><i class="fa-brands fa-github"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                        <div class="copyright">
+                            <p> &copy; 2025 Pablo Pena. All rights reserved. </p>
+                        </div>
+                    </div>
+            </div>
+
+
+            <!---click features (about me section)--->
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+
+                function opentab(tabname) {
+                    for (tablink of tablinks) {
+                        tablink.classList.remove("active-link");
+                    }
+                    for (tabcontent of tabcontents) {
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+
+            <script>
+            const sections = document.querySelectorAll("section, .about, .portfolio, .resume, #contact");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            window.onscroll = () => {
+                let current = "";
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href").includes(current)) {
+                        link.classList.add("active");
+                    }
+                });
+            };
+            </script>
+
+
+    </body>
+    </html>

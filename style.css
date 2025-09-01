@@ -290,6 +290,16 @@ nav ul li a:hover::after{
     background: #ff4c2c;
     color: #fff;
 }
+.tech-stack span {
+  display: inline-block;
+  background: rgba(255, 76, 44, 0.1);
+  color: #ff4c2c;
+  border: 1px solid #ff4c2c;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin: 5px;
+}
 
 /*-- battlebots section --*/
 #project-details {

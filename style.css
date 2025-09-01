@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #ff4c2c);
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #4e0c01);
     background-size: 400% 400%;
     animation: gradientMove 15s ease infinite;
     color: #fff;

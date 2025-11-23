@@ -590,6 +590,32 @@ nav ul li a:hover::after{
   background-color: #ff4c2c;
 
 }
+/* Thumbnail inside each talk card */
+.talk-thumb {
+    width: 120px;              /* consistent width */
+    height: 120px;             /* consistent height */
+    border-radius: 10px;        /* rounded edges */
+    object-fit: cover;          /* crop instead of stretch */
+    margin-right: 20px;
+    flex-shrink: 0;             /* prevents shrinking on small screens */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Make each talk card a horizontal flexbox */
+.talk-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /*-- media queries [THIS SECTION IS STILL A WORK IN PROGRESS]--*/
 @media only screen and (max-width: 768px){

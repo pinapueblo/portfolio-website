@@ -401,6 +401,73 @@ nav ul li a:hover::after{
   color: #333;
 }
 
+/*-- DBF section --*/
+.dbf-videos {
+  text-align: center;
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+}
+
+.dbf-videos h2 {
+  font-size: 2.2em;
+  margin-bottom: 10px;
+}
+
+.dbf-videos p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* === FORCE DARK BACKGROUND ON VIDEO SECTION === */
+.video-section, 
+.video-grid {
+  background: transparent !important;
+}
+
+/* === VIDEO GRID LAYOUT === */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* === GLASS-STYLE VIDEO CARDS (MATCHES .work) === */
+.video-card {
+  background: rgba(255, 255, 255, 0.05) !important;  /* ✅ MATCHES YOUR .work STYLE */
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 24px rgba(255, 76, 44, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(255, 76, 44, 0.25); /* subtle orange edge */
+}
+
+/* === HOVER LIFT EFFECT === */
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(255, 76, 44, 0.35);
+}
+
+/* === IFRAME FIX (REMOVES WHITE BACKGROUND BUG) === */
+.video-card iframe {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  border: none !important;
+  border-radius: 10px;
+  background: transparent !important;
+  display: block;
+}
+
+/* === VIDEO CAPTION === */
+.video-card p {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
 /*-- resume section --*/
 
 

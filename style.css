@@ -352,7 +352,7 @@ nav ul li a:hover::after{
 .chess-gallery {
   text-align: center;
   padding: 50px 0;
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #4e0c01);
+  background: transparent;
 }
 
 .chess-gallery h2 {

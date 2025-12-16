@@ -209,14 +209,17 @@ nav ul li a:hover::after{
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(255, 76, 44, 0.1);
+    box-shadow: 0 8px 24px rgba(255, 76, 44, 0.15);
     background: rgba(255, 255, 255, 0.05); /* Subtle card background */
     backdrop-filter: blur(6px); /* Glassy feel */
     transition: transform 0.3s ease-in-out;
+
 }
 
 .work:hover {
     transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(255, 76, 44, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work img {

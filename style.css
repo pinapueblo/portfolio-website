@@ -410,6 +410,9 @@ nav ul li a:hover::after{
 }
 
 /*-- DBF section --*/
+.project-detail {
+    margin-top: 50px;
+}
 .dbf-videos {
   text-align: center;
   padding: 60px 40px;

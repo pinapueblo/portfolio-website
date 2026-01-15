@@ -93,30 +93,44 @@
   <h2>CAD Gallery – Custom Chess Set</h2>
   <p>Explore the CAD designs for each piece and the custom board layout.</p>
 
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="images/pawn.png" alt="Pawn CAD Model">
-      <p>Pawn</p>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-slide active">
+        <img src="images/pawn.png" alt="Pawn CAD Model">
+        <p>Pawn</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/rook.png" alt="Rook CAD Model">
+        <p>Rook</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/knight.png" alt="Knight CAD Model">
+        <p>Knight</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/bishop.png" alt="Bishop CAD Model">
+        <p>Bishop</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/queen.png" alt="Queen CAD Model">
+        <p>Queen</p>
+      </div>
+      <div class="carousel-slide">
+        <img src="images/king.png" alt="King CAD Model">
+        <p>King</p>
+      </div>
     </div>
-    <div class="gallery-item">
-      <img src="images/rook.png" alt="Rook CAD Model">
-      <p>Rook</p>
-    </div>
-    <div class="gallery-item">
-      <img src="images/knight.png" alt="Knight CAD Model">
-      <p>Knight</p>
-    </div>
-    <div class="gallery-item">
-      <img src="images/bishop.png" alt="Bishop CAD Model">
-      <p>Bishop</p>
-    </div>
-    <div class="gallery-item">
-      <img src="images/queen.png" alt="Queen CAD Model">
-      <p>Queen</p>
-    </div>
-    <div class="gallery-item">
-      <img src="images/king.png" alt="King CAD Model">
-      <p>King</p>
+
+    <button class="carousel-btn prev-btn" aria-label="Previous image">❮</button>
+    <button class="carousel-btn next-btn" aria-label="Next image">❯</button>
+
+    <div class="carousel-indicators">
+      <span class="indicator active" data-slide="0"></span>
+      <span class="indicator" data-slide="1"></span>
+      <span class="indicator" data-slide="2"></span>
+      <span class="indicator" data-slide="3"></span>
+      <span class="indicator" data-slide="4"></span>
+      <span class="indicator" data-slide="5"></span>
     </div>
   </div>
 </section>
@@ -138,6 +152,51 @@
     <p>&copy; 2025 Pablo Pena. All rights reserved.</p>
   </div>
 </div>
+
+
+<script>
+  const carousel = document.querySelector('.carousel');
+  const slides = document.querySelectorAll('.carousel-slide');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  const indicators = document.querySelectorAll('.indicator');
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  indicators.forEach((indicator) => {
+    indicator.addEventListener('click', (e) => {
+      currentIndex = parseInt(e.target.dataset.slide);
+      showSlide(currentIndex);
+    });
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prevSlide();
+    if (e.key === 'ArrowRight') nextSlide();
+  });
+</script>
 
 </body>
 </html>

@@ -362,29 +362,18 @@ nav ul li a i {
     color: #ff4c2c;
 }
 
-/*-- chess section --*/
-.chess-gallery {
-  text-align: center;
-  padding: 50px 0;
-  background: transparent;
-}
 
-.chess-gallery h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color:#fff;
-}
-
-.chess-gallery p {
-  color: #fff;
-  margin-bottom: 30px;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .carousel-container {
   position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .carousel {
@@ -396,45 +385,47 @@ nav ul li a i {
 
 .carousel-slide {
   display: none;
-  text-align: center;
   animation: fadeIn 0.5s ease-in-out;
-}
-
-.carousel-slide.active {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
 }
 
 .carousel-slide img {
-  width: 100%;
-  border-radius: 10px;
-  max-height: 500px;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 14px;
 }
 
-.carousel-slide p {
+.carousel-slide p{
   margin-top: 15px;
   font-weight: 600;
   color: #fff;
   font-size: 1.2em;
 }
 
+.carousel-slide.active {
+  display: block;
+}
+
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.8);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
   color: #333;
   border: none;
-  font-size: 24px;
-  padding: 10px 15px;
+  font-size: 22px;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background 0.3s ease, color 0.3s ease;
+  border-radius: 50%;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
   z-index: 10;
 }
 
@@ -529,6 +520,19 @@ nav ul li a i {
   margin-bottom: 30px;
   color: #555;
 }
+
+/* === PROJECT LAYOUT === */
+.project-subheading {
+    font-size: 32px;
+    color: #ff4c2c;
+    margin-bottom: 20px;
+}
+.project-detail p{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+    line-height: 1.5;
+}
 .project-layout {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
@@ -565,12 +569,9 @@ nav ul li a i {
     opacity: 0.85;
     text-align: center;
 }
-
-.carousel-slide img{
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    border-radius: 14px;
+.project-detail h2{
+    color: #ff4c2c;
+    margin-bottom: 20px;
 }
 
 /* === FORCE DARK BACKGROUND ON VIDEO SECTION === */
@@ -624,8 +625,6 @@ nav ul li a i {
 }
 
 /*-- resume section --*/
-
-
 .resume {
     padding: 100px 0;
 }

@@ -199,7 +199,7 @@ nav ul li a i {
 }
 /*-- projects section --*/
 #portfolio {
-    padding: 100px 10%;
+    padding: 60px 10%;
     background: transparent; /* Keep animated gradient visible */
 }
 
@@ -626,7 +626,7 @@ nav ul li a i {
 
 /*-- resume section --*/
 .resume {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 #resume p{
     font-size: 16px;
@@ -655,7 +655,7 @@ nav ul li a i {
 /*-- contact section --*/
 
 #contact{
-    padding: 100px 0;
+    padding: 60px 0;
 }
 #contact p{
     font-size: 20px;

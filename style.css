@@ -10,7 +10,7 @@ html{
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(135deg, #0d0d0d, #1a1a1a, #4e0c01);
+    background: linear-gradient(135deg, #000000, #1a1a1a, #4e0c01);
     background-size: 400% 400%;
     animation: gradientMove 15s ease infinite;
     color: #fff;
@@ -659,13 +659,70 @@ nav ul li a i {
 
 }
 
+/*-- tutoring section --*/
+body.tutoring-page {
+    background: #000 !important;
+}
+body.tutoring-page #tutoring-header,
+body.tutoring-page .tutoring,
+body.tutoring-page #tutoring-contact {
+    background-color: #000;
+}
+body.tutoring-page .tutoring,
+body.tutoring-page #tutoring-contact {
+    color: #fff;
+}
+#tutoring-header{
+    background-color: #000;
+}
+.tutoring {
+    background-color: #000;
+}
+.tutoring-contact{
+    background-color: #000;
+}
+.tutoring h2{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+    line-height: 1.5;
+}
+.tutoring li{
+    list-style: none;
+    margin-top: 20px;
+    color: #fff;
+}
+.tutoring p{
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff;
+    line-height: 1.5;
+}
+.testimonial-card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  color:#ddd;
+}
+
+/* On mouse-over, add a deeper shadow */
+.testimonial-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
 /*-- contact section --*/
 
 #contact{
     padding: 60px 0;
 }
 #contact p{
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 20px;
     color: #fff;
     line-height: 1.5;
@@ -871,8 +928,6 @@ nav ul li a i {
         margin-right: 0;
         margin-bottom: 10px;
     }
-    
-    @media only screen and (max-width: 768px){
     nav ul {
         flex-direction: column;
         align-items: center;
@@ -880,8 +935,6 @@ nav ul li a i {
     nav ul li {
         margin: 10px 0;
     }
-}
-
 }
 
 /* === CAD DESIGN SECTION === */

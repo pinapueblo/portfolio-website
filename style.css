@@ -819,7 +819,27 @@ body.tutoring-page #tutoring-contact {
 .container {
   padding: 2px 16px;
 }
+.contact a {
+  position: relative;
+  text-decoration: none;
+  color: #ff4c2c;
+}
 
+.contact a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+  color: #ff4c2c;
+}
+
+.contact a:hover::after {
+  width: 100%;
+}
 
 /*-- contact section --*/
 

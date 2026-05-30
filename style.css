@@ -662,37 +662,39 @@ nav ul li a i {
 
 /*-- tutoring section --*/
 body.tutoring-page {
-        background-color: #0a0a0a;
-        margin: 0;
-        line-height: 1.8;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: #fff;
+    background:
+        radial-gradient(circle at top, #111 0%, #0a0a0a 50%);
+    margin: 0;
+    line-height: 1.8;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
 }
-/* Ensure all text on tutoring page is readable */
 body.tutoring-page * {
         color: #fff;
 }
 /* Keep links visible with accent color */
 body.tutoring-page a {
-        color: #ff4c2c;
+        color: #fff;
 }
-body.tutoring-page #tutoring-header,
-body.tutoring-page .tutoring,
+body.tutoring-page, body.tutoring-page .tutoring,
 body.tutoring-page #tutoring-contact {
         background-color: transparent;
         width: 100%;
+        text-align: left;
 }
 .tutoring {
     padding: 3rem 0;
     max-width: 900px;
     margin: 0 auto;
 }
-
+.testimonials {
+    text-align: center;
+}
 .tutoring h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;

@@ -36,12 +36,14 @@
       </li>
       </ul>
     </nav>
-    <div class="header">
-      <h1>Tutoring Services</h1>
-      <p>Personalized tutoring in Mathematics, Engineering, and more.</p>
+    <div class="tutoring-header">
+        <h1>Tutoring Services</h1>
+        <p>Personalized tutoring in Mathematics, Engineering, and more.</p>
+      </div>
     </div>
-  </div>
 </header>
+
+
 <!-- Main Content -->
 <main>
   <section class="tutoring">
@@ -59,15 +61,31 @@
   </section>
 </main>
 
-<!---client testimonials-->
 <section class="testimonials">
   <div class="container">
-    <h2>Real success stories</h2>
+    <h2>Real Success Stories</h2>
     <p>Here's what my students have to say about their tutoring experience:</p>
-    <div class="testimonial-card">
-      <p>"Pablo's tutoring sessions were a game-changer for me. He explained complex engineering concepts in a way that was easy to understand, and his patience and dedication made all the difference. Thanks to him, I aced my exams!"</p>
-      <h3>- Alex M.</h3>
-  </div>
+
+    <div class="testimonials-wrapper">
+      <button class="testimonials-prev" aria-label="Previous testimonial"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+      <div class="testimonial-track">
+        <div class="testimonial-card">
+          <p>
+            "Pablo's tutoring sessions were a game-changer for me. He explained difficult concepts clearly and helped me improve my grades quickly."
+          </p>
+          <h3>- Alex M.</h3>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            "Excellent tutor — patient, knowledgeable, and always prepared. I was able to pass my exams with confidence after working with Pablo."
+          </p>
+          <h3>- Jamie R.</h3>
+        </div>
+      </div>
+      <button class="testimonials-next" aria-label="Next testimonial"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+
   </div>
 </section>
 
@@ -85,13 +103,36 @@
                             <a href=""><i class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
-                        <div class="copyright">
-                            <p> &copy; 2026 Pablo Pena. All rights reserved. </p>
-                        </div>
+                    <div class="copyright">
+                      <p> &copy; 2026 Pablo Pena. All rights reserved. </p>
                     </div>
-            </div>
+                                  </div>
+                          </div>
 
-      
+                <script>
+                  document.addEventListener('DOMContentLoaded', function () {
+                    const track = document.querySelector('.testimonial-track');
+                    const prev = document.querySelector('.testimonials-prev');
+                    const next = document.querySelector('.testimonials-next');
+                    if (!track || !prev || !next) return;
 
-</body>
-</html>
+                    const scrollAmount = () => Math.round(track.clientWidth * 0.9);
+
+                    next.addEventListener('click', () => {
+                      track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+                    });
+
+                    prev.addEventListener('click', () => {
+                      track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+                    });
+
+                    // Allow arrow keys when focus is inside testimonials
+                    track.addEventListener('keydown', (e) => {
+                      if (e.key === 'ArrowRight') next.click();
+                      if (e.key === 'ArrowLeft') prev.click();
+                    });
+                  });
+                </script>
+
+              </body>
+              </html>
